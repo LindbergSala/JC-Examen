@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.main-frame {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: repeat(31, 1fr);
+    background: linear-gradient(to right, #381ea0, #000000);
+}
+
+.sun {
+position: absolute;
+width: 50%;
+height: 100%;
+left: -650px;
+
+background: #FFD029;
+box-shadow: 0px 0px 250px rgba(237, 187, 5, 0.2);
+border-radius: 100%;
+}
+
