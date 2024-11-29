@@ -142,9 +142,9 @@ h2 {
 }
 
 .Mercury, .Venus, .Earth, .Mars, .Jupiter, .Saturn, .Uranus, .Neptune {
-    transition: transform 0.3s ease; /* Ger en mjuk animation vid uppskalning */
+    transition: transform 0.3s ease;
 }
 
 .Mercury:hover, .Venus:hover, .Earth:hover, .Mars:hover, .Jupiter:hover, .Saturn:hover, .Uranus:hover, .Neptune:hover {
-    transform: scale(1.2); /* Skalar upp planeten med 20% */
+    transform: scale(1.2);
 }
