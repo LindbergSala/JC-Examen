@@ -1,23 +1,33 @@
 // ui.js
 // Denna modul hanterar UI-manipulation och event-lyssnare.
 
-export const renderPlanets = (bodies) => {
+export const renderCelestialBodies = (bodies) => {
+    const nameToClassName = {
+        'Sun': 'Solen',
+        'Mercury': 'Merkurius',
+        'Venus': 'Venus',
+        'Earth': 'Jorden',
+        'Mars': 'Mars',
+        'Jupiter': 'Jupiter',
+        'Saturn': 'Saturnus',
+        'Uranus': 'Uranus',
+        'Neptune': 'Neptunus'
+    };
+
     bodies.forEach(body => {
-        console.log('Processing body:', body.name); // Debug-logg
-        const planetElement = document.querySelector(`.${body.name}`);
-        if (planetElement) {
-            console.log('Found element for:', body.name); // Debug-logg
-            planetElement.addEventListener('click', () => {
+        const className = nameToClassName[body.name] || body.name;
+        const celestialElement = document.querySelector(`.${className}`);
+        if (celestialElement) {
+            celestialElement.addEventListener('click', () => {
                 showOverlay(body);
             });
         } else {
-            console.warn('No element found for:', body.name); // Debug-logg
+            console.warn(`Ingen HTML-element hittades för ${body.name}`);
         }
     });
 };
 
 export const showOverlay = (body) => {
-    console.log('Showing overlay for:', body.name); // Debug-logg
     let overlay = document.querySelector('.overlay');
     if (!overlay) {
         overlay = document.createElement('div');
@@ -58,3 +68,4 @@ export const hideOverlay = () => {
         overlay.style.display = 'none';
     }
 };
+

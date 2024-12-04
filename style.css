@@ -18,7 +18,7 @@ body {
     background: linear-gradient(to right, #381ea0, #000000);
 }
 
-.Sun {
+.Solen {
 position: absolute;
 width: 50%;
 height: 100%;
@@ -142,7 +142,7 @@ h2 {
     cursor: pointer;
 }
 
-.Merkurius, .Venus, .Jorden, .Mars, .Jupiter, .Saturnus, .Uranus, .Neptune {
+.Merkurius, .Venus, .Jorden, .Mars, .Jupiter, .Saturnus, .Uranus, .Neptunus {
     transition: transform 0.3s ease;
 }
 

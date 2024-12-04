@@ -2,7 +2,7 @@
 // Detta är huvudskriptet som knyter ihop allt.
 
 import { getApiKey, getBodies } from './api.js';
-import { renderPlanets } from './ui.js';
+import { renderCelestialBodies } from './ui.js';
 
 const init = async () => {
     const apiKey = await getApiKey();
@@ -17,9 +17,9 @@ const init = async () => {
         return;
     }
 
-    const planets = bodies.filter(body => body.type === 'planet');
+    const celestialBodies = bodies.filter(body => body.type === 'planet' || body.type === 'star');
 
-    renderPlanets(planets);
+    renderCelestialBodies(celestialBodies);
 };
 
-document.addEventListener('DOMContentLoaded', init); // Säkerställer att DOM är laddad innan init körs
+document.addEventListener('DOMContentLoaded', init);
