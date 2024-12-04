@@ -36,28 +36,29 @@ export const showOverlay = (body) => {
     }
 
     overlay.innerHTML = `
-        <div class="overlay-content">
-            <h1>${body.name}</h1>
-            <h2>${body.latinName}</h2>
-            <p>${body.desc}</p>
-            <div class="info-grid">
-                <div><strong>Omkrets:</strong> ${body.circumference} km</div>
-                <div><strong>Km från solen:</strong> ${body.distance} km</div>
-                <div><strong>Max temperatur:</strong> ${body.temp.day}°C</div>
-                <div><strong>Min temperatur:</strong> ${body.temp.night}°C</div>
-                <div><strong>Månar:</strong> ${body.moons.length > 0 ? body.moons.join(', ') : 'Inga'}</div>
-            </div>
-            <button class="close-overlay">Stäng</button>
+    <div class="overlay-content">
+        <h1>${body.name.toUpperCase()}</h1>
+        <h2>${body.latinName}</h2>
+        <p>${body.desc}</p>
+        <hr class="divider"> <!-- Första linjen -->
+        <div class="info-grid">
+            <div><strong>Omkrets:</strong> ${body.circumference} km</div>
+            <div><strong>Km från solen:</strong> ${body.distance} km</div>
+            <div><strong>Max temperatur:</strong> ${body.temp.day}°C</div>
+            <div><strong>Min temperatur:</strong> ${body.temp.night}°C</div>
         </div>
-    `;
+        <hr class="divider"> <!-- Andra linjen -->
+        <div><strong>Månar:</strong> ${body.moons.length > 0 ? body.moons.join(', ') : 'Inga'}</div>
+        <button class="close-overlay">Stäng</button>
+    </div>
+`;
 
-    // Dölj info-texten
+
     const infoText = document.querySelector('.info-text');
     if (infoText) {
         infoText.style.display = 'none';
     }
 
-    // Dölj alla planeter utom Solen
     const planets = document.querySelectorAll('.planet-row > article');
     planets.forEach(planet => {
         if (!planet.classList.contains('Solen')) {
@@ -65,10 +66,9 @@ export const showOverlay = (body) => {
         }
     });
 
-    // Ändra färg på Solen
     const sunElement = document.querySelector('.Solen');
     if (sunElement) {
-        sunElement.style.backgroundColor = '#428ED4'; // Blå färg
+        sunElement.style.backgroundColor = '#428ED4';
         sunElement.style.boxShadow = '0px 0px 250px rgba(66, 142, 212, 0.5)';
     }
 
@@ -89,20 +89,17 @@ export const hideOverlay = () => {
         overlay.style.display = 'none';
     }
 
-    // Visa alla planeter igen
     const planets = document.querySelectorAll('.planet-row > article');
     planets.forEach(planet => {
         planet.style.display = 'block';
     });
 
-    // Återställ färgen på Solen
     const sunElement = document.querySelector('.Solen');
     if (sunElement) {
-        sunElement.style.backgroundColor = '#FFD029'; // Ursprunglig gul färg
+        sunElement.style.backgroundColor = '#FFD029';
         sunElement.style.boxShadow = '0px 0px 250px rgba(237, 187, 5, 0.2)';
     }
 
-    // Visa info-texten igen
     const infoText = document.querySelector('.info-text');
     if (infoText) {
         infoText.style.display = 'flex';

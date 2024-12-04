@@ -177,13 +177,14 @@ h2 {
     font-size: 3rem;
     margin: 0;
     color: #ffffff;
+    text-transform: uppercase;
 }
 
 .overlay-content h2 {
     font-size: 1.5rem;
-    margin: 10px 0;
+    padding-left: 1px;
     color: #FFD029;
-    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .overlay-content p {
@@ -203,15 +204,19 @@ h2 {
 }
 
 .info-grid div {
-    background: rgba(255, 255, 255, 0.1);
     padding: 10px 15px;
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.info-grid strong {
-    color: #FFD029;
+.divider {
+    border: none; /* Ta bort standardutseendet för <hr> */
+    height: 1px; /* Gör linjen tunn */
+    background-color: white; /* Färga linjen vit */
+    margin: 20px 0; /* Ge linjen lite utrymme ovanför och under */
+    opacity: 0.5; /* Gör linjen något genomskinlig */
 }
 
 .close-overlay {
