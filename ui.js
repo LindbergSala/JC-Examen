@@ -42,16 +42,19 @@ export const showOverlay = (body) => {
         <p>${body.desc}</p>
         <hr class="divider"> <!-- Första linjen -->
         <div class="info-grid">
-            <div><strong>Omkrets:</strong> ${body.circumference} km</div>
-            <div><strong>Km från solen:</strong> ${body.distance} km</div>
-            <div><strong>Max temperatur:</strong> ${body.temp.day}°C</div>
-            <div><strong>Min temperatur:</strong> ${body.temp.night}°C</div>
+            <div><strong>Omkrets</strong> ${body.circumference} km</div>
+            <div><strong>Km från solen</strong> ${body.distance} km</div>
+            <div><strong>Max temperatur</strong> ${body.temp.day}°C</div>
+            <div><strong>Min temperatur</strong> ${body.temp.night}°C</div>
         </div>
         <hr class="divider"> <!-- Andra linjen -->
-        <div><strong>Månar:</strong> ${body.moons.length > 0 ? body.moons.join(', ') : 'Inga'}</div>
+        <div class="info-grid">
+            <div><strong>Månar</strong> ${body.moons.length > 0 ? body.moons.join(', ') : 'Inga'}</div>
+        </div>
         <button class="close-overlay">Stäng</button>
     </div>
 `;
+
 
 
     const infoText = document.querySelector('.info-text');

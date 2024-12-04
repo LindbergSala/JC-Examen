@@ -188,7 +188,7 @@ h2 {
 }
 
 .overlay-content p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.6;
     color: #cccccc;
     margin: 20px 0;
@@ -200,7 +200,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin: 20px 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .info-grid div {
@@ -211,7 +211,13 @@ h2 {
     justify-content: space-between;
 }
 
+.info-grid strong {
+    text-transform: uppercase;
+    font-weight: bold; /* Gör texten tydligare */
+}
+
 .divider {
+    display: flex;
     border: none; /* Ta bort standardutseendet för <hr> */
     height: 1px; /* Gör linjen tunn */
     background-color: white; /* Färga linjen vit */
