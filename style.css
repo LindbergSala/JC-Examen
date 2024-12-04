@@ -150,33 +150,84 @@ h2 {
     transform: scale(1.2);
 }
 
-
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
     display: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    padding: 20px;
 }
 
 .overlay-content {
-    background: #db0a0a;
-    padding: 20px;
-    max-width: 600px;
-    width: 80%;
-    overflow-y: auto;
-    color: #000;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Lora', serif;
 }
 
-.overlay-content h2, .overlay-content h3 {
-    margin-top: 0;
+.overlay-content h1 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.overlay-content h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #FFD029;
+    font-weight: 700;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.info-grid div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-grid strong {
+    color: #FFD029;
 }
 
 .close-overlay {
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: #ff4f4f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
+
+.close-overlay:hover {
+    background: #ff3232;
+}
+
