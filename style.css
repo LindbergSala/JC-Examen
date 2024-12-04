@@ -18,7 +18,7 @@ body {
     background: linear-gradient(to right, #381ea0, #000000);
 }
 
-.sun {
+.Sun {
 position: absolute;
 width: 50%;
 height: 100%;
@@ -26,6 +26,7 @@ left: -650px;
 border-radius: 100%;
 background: #FFD029;
 box-shadow: 0px 0px 250px rgba(237, 187, 5, 0.2);
+cursor: pointer;
 }
 
 .info-text {
@@ -63,7 +64,7 @@ h2 {
     gap: 100px;
 }
 
-.Mercury {
+.Merkurius {
     background-color: #888888;
     width: 30px;
     height: 30px;
@@ -80,7 +81,7 @@ h2 {
     cursor: pointer;
 }
 
-.Earth {
+.Jorden {
     background-color: #428ED4;
     width: 50px;
     height: 50px;
@@ -104,7 +105,7 @@ h2 {
     cursor: pointer;
 }
 
-.Saturn {
+.Saturnus {
     position: relative;
     background-color: #C7AA72;
     width: 100px;
@@ -113,7 +114,7 @@ h2 {
     cursor: pointer;
 }
 
-.Saturn::before {
+.Saturnus::before {
     content: '';
     position: absolute;
     width: 160px;
@@ -133,7 +134,7 @@ h2 {
     cursor: pointer;
 }
 
-.Neptune {
+.Neptunus {
     background-color: #7A91A7;
     width: 70px;
     height: 70px;
@@ -141,10 +142,41 @@ h2 {
     cursor: pointer;
 }
 
-.Mercury, .Venus, .Earth, .Mars, .Jupiter, .Saturn, .Uranus, .Neptune {
+.Merkurius, .Venus, .Jorden, .Mars, .Jupiter, .Saturnus, .Uranus, .Neptune {
     transition: transform 0.3s ease;
 }
 
-.Mercury:hover, .Venus:hover, .Earth:hover, .Mars:hover, .Jupiter:hover, .Saturn:hover, .Uranus:hover, .Neptune:hover {
+.Merkurius:hover, .Venus:hover, .Jorden:hover, .Mars:hover, .Jupiter:hover, .Saturnus:hover, .Uranus:hover, .Neptunus:hover {
     transform: scale(1.2);
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background: #db0a0a;
+    padding: 20px;
+    max-width: 600px;
+    width: 80%;
+    overflow-y: auto;
+    color: #000;
+}
+
+.overlay-content h2, .overlay-content h3 {
+    margin-top: 0;
+}
+
+.close-overlay {
+    margin-top: 20px;
 }
