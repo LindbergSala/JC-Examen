@@ -12,7 +12,7 @@ export const getApiKey = async () => {
             throw new Error('Failed to fetch API key');
         }
         const data = await response.json();
-        console.log('API Key:', data.key); // Debug-logg
+        console.log('API Key:', data.key);
         return data.key;
     } catch (error) {
         console.error('Error fetching API key:', error);
@@ -31,7 +31,7 @@ export const getBodies = async (apiKey) => {
             throw new Error('Failed to fetch celestial bodies');
         }
         const data = await response.json();
-        console.log('Celestial Bodies:', data.bodies); // Debug-logg
+        console.log('Celestial Bodies:', data.bodies);
         return data.bodies;
     } catch (error) {
         console.error('Error fetching celestial bodies:', error);
